@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donut Kita</title>
+    <link rel="icon" href="img/logo.png">
+
+      <!-- link css -->
+      <link rel="stylesheet" href="css/style.css">
+
+      <!-- link bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- link icon awensome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+      <!-- link AOS -->
+      <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  </head>
+  <body>
+
+      <!-- Navbar -->
+      <nav id="navbar" class="navbar navbar-expand-lg bg-success bg-gradient fixed-top" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container d-flex justify-content-between">
+          <!-- Brand Logo -->
+          <a class="navbar-brand" href="#contact">
+            <img src="img/logo putih.png" class="img-fluid" alt="Logo-produk">
+          </a>
+      
+          <!-- Toggler Button for Mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- Menu Items -->
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item" data-aos="fade-up" data-aos-delay="200">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item" data-aos="fade-up" data-aos-delay="300">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              <li class="nav-item dropdown" data-aos="fade-up" data-aos-delay="400">
+                <a class="nav-link dropdown-toggle" href="#menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#donut-coklate">Donut Coklat</a></li>
+                  <li><a class="dropdown-item" href="#donut-vanilla">Donut Vanilla</a></li>
+                  <li><a class="dropdown-item" href="#donut-macha">Donut Matcha</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" data-aos="fade-up" data-aos-delay="500">
+                <a class="nav-link" href="#promo">Promo</a>
+              </li>
+              <li class="nav-item" data-aos="fade-up" data-aos-delay="600">
+                <a class="nav-link" href="#Testimoni">Testimoni</a>
+              </li>
+              <li class="nav-item" data-aos="fade-up" data-aos-delay="700">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+      
+            <!-- Login and Register Buttons -->
+            <div class="daftarNlogin" data-aos="fade-left" data-aos-delay="800">
+              <form class="d-flex" role="search">
+                <button type="button" class="btn btn-outline-light me-1" data-bs-toggle="modal" data-bs-target="#loginModal">
+                  Masuk
+                </button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                  Daftar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+
+      <!-- Modal Login -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content shadow-lg border-0 rounded-4">
+            <div class="modal-header bg-primary text-white rounded-top-4">
+              <h5 class="modal-title" id="loginModalLabel"><i class="bi bi-box-arrow-in-right"></i> Masuk</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+              <form>
+                <div class="mb-3">
+                  <label for="email" class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                  <input type="email" class="form-control rounded-pill px-3" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label"><i class="bi bi-lock"></i> Kata Sandi</label>
+                  <input type="password" class="form-control rounded-pill px-3" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 rounded-pill fw-bold"><i class="bi bi-box-arrow-in-right"></i> Masuk</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Daftar -->
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content shadow-lg border-0 rounded-4">
+            <div class="modal-header bg-success text-white rounded-top-4">
+              <h5 class="modal-title" id="registerModalLabel"><i class="bi bi-person-plus"></i> Daftar</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+              <form>
+                <div class="mb-3">
+                  <label for="registerEmail" class="form-label"><i class="bi bi-envelope"></i> Email</label>
+                  <input type="email" class="form-control rounded-pill px-3" id="registerEmail" required>
+                </div>
+                <div class="mb-3">
+                  <label for="registerPassword" class="form-label"><i class="bi bi-lock"></i> Kata Sandi</label>
+                  <input type="password" class="form-control rounded-pill px-3" id="registerPassword" required>
+                </div>
+                <div class="mb-3">
+                  <label for="registerConfirmPassword" class="form-label"><i class="bi bi-lock-fill"></i> Konfirmasi Kata Sandi</label>
+                  <input type="password" class="form-control rounded-pill px-3" id="registerConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100 rounded-pill fw-bold"><i class="bi bi-person-plus"></i> Daftar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- home -->
+    <section id="home">
+      <div id="carouselExampleSlidesOnly" class="carousel slide mt-5 pt-5" data-bs-ride="carousel" data-bs-interval="1500">
+    
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row d-flex flex-column flex-md-row align-items-center">
+                
+                <!-- Teks -->
+                <div class="col-md-6 order-2 order-md-1">
+                  <div class="deskription" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>Selamat Datang di Donut Kita!</h1>
+                    <p>Rasakan kelezatan donat premium dengan berbagai varian rasa favorit seperti Coklat, Vanilla, dan Matcha. Setiap gigitan memberikan sensasi manis dan lembut yang tak terlupakan.</p>
+                    <a href="#menu" class="btn btn-warning mt-3 fw-bold rounded-pill shadow p-4 fs-4 w-50">
+                      Pesan Sekarang 
+                      <ion-icon name="bag-handle-outline" class="ms-1 fs-4"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+            
+                <!-- Gambar -->
+                <div class="col-md-6 order-1 order-md-2">
+                  <div class="logo" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="img/home.png" class="w-100 img-fluid" alt="Gambar Donut Kita">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row d-flex flex-column flex-md-row align-items-center">
+                
+                <!-- Teks -->
+                <div class="col-md-6 order-2 order-md-1">
+                  <div class="deskription" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>Donat Lezat, Setiap Hari!</h1>
+                    <p>Donat kami dibuat segar setiap hari dengan bahan berkualitas tinggi, memberikan rasa yang autentik dan tekstur yang sempurna.</p>
+                    <a href="#menu" class="btn btn-warning mt-3 fw-bold rounded-pill shadow p-4 fs-4 w-50">
+                      Pesan Sekarang 
+                      <ion-icon name="bag-handle-outline" class="ms-1 fs-4"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+            
+                <!-- Gambar -->
+                <div class="col-md-6 order-1 order-md-2">
+                  <div class="logo" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="img/donat2.png" class="w-100 img-fluid" alt="Gambar Donut Kita">
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row d-flex flex-column flex-md-row align-items-center">
+    
+                <div class="col-md-6 order-1 order-md-2">
+                  <div class="logo" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="img/delevery.png" class="w-100 img-fluid" alt="Gambar Donut Kita">
+                  </div>
+                </div>                
+                
+                <div class="col-md-6 order-2 order-md-1">
+                  <div class="deskription" data-aos="fade-left" data-aos-duration="1000">
+                    <h1>Pesan & Bayar di Tempat!</h1>
+                    <p>Tak perlu khawatir! Nikmati kemudahan pemesanan donat favoritmu dengan sistem COD. Dijamin aman dan praktis.</p>
+                    <a href="#menu" class="btn btn-warning mt-3 fw-bold rounded-pill shadow p-4 fs-4 w-50">
+                      Pesan Sekarang 
+                      <ion-icon name="bag-handle-outline" class="ms-1 fs-4"></ion-icon>
+                    </a>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end home -->
+
+    <!-- About Us -->
+    <section id="about" class="container my-5">
+      <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+        
+        <!-- Teks -->
+        <div class="col-lg-7 p-3 p-lg-5 pt-lg-3 text-start" data-aos="fade-right" data-aos-duration="1000">
+          <h1 class="display-4 fw-bold lh-1 mb-4 text-body-emphasis">Apa Itu Donut Kita? Kepoin Yuk</h1>
+          <p class="lead">Donut Kita menyajikan donat berkualitas dengan bahan segar, dari rasa klasik hingga inovatif. Kami berkomitmen menghadirkan donat lezat dan pengalaman menikmati donat yang tak terlupakan.</p>
+    
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
+            <a href="#menu" class="btn btn-warning btn-lg px-4 me-md-2 fw-bold text-white text-decoration-none d-flex align-items-center shadow hover-shadow rounded-pill">
+              Belanja Sekarang Yuk! <ion-icon name="bag-handle-outline" class="ms-2"></ion-icon>
+            </a>
+          </div>
+        </div>
+    
+        <!-- Gambar -->
+        <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg d-flex align-items-center justify-content-center" data-aos="fade-left" data-aos-duration="1000">
+          <img class="rounded-lg-3 img-fluid" src="img/about.png" alt="Belajar di gamelab.id" width="540">
+        </div>
+    
+      </div>
+    </section>
+    
+    <!-- end About Us -->
+
+    <!-- Menu -->
+    <section id="menu">
+      <div class="container">
+        <h1 class="logo text-center" data-aos="fade-up" data-aos-duration="1000">MENU DI DONUT KITA👩‍🍳🥨</h1>
+        
+        <div class="allmenu">
+    
+          <!-- Donut Coklat -->
+          <div class="coklate" id="donut-coklate">
+            <div class="row g-4" data-aos="fade-up" data-aos-duration="1000">
+              <h1 class="text-left fw-bold text-dark p-3">🍫 Donut Coklat</h1>
+    
+              <!-- Donut 1 -->
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-flex align-items-center" data-aos="fade-up" data-aos-duration="1200">
+                <div class="card">
+                  <img src="img/coklat/menu1.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Donut Coklat Premium</h5>
+                    <p class="card-text">Taburan coklat premium dengan kelembutan adonan sempurna.</p>
+                    <p class="card-price">Rp 25.000</p>
+                    <div class="d-flex">
+                      <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                        <i class="bi bi-cart"></i> Beli
+                      </button>
+                      <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        <i class="bi bi-search me-1"></i>Info
+                      </button>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Donut 2 -->
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1400">
+                <div class="card">
+                  <img src="img/coklat/menu2.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Coklat Almond Delight</h5>
+                    <p class="card-text">Coklat kaya rasa berpadu dengan almond renyah.</p>
+                    <p class="card-price">Rp 27.000</p>
+                    <div class="d-flex">
+                      <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                        <i class="bi bi-cart"></i> Beli
+                      </button>
+                      <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        <i class="bi bi-search me-1"></i>Info
+                      </button>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Donut 3 -->
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1600">
+                <div class="card">
+                  <img src="img/coklat/menu3.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Double Choco Crunch</h5>
+                    <p class="card-text">Perpaduan coklat leleh dan taburan crunchy yang menggoda.</p>
+                    <p class="card-price">Rp 30.000</p>
+                    <div class="d-flex">
+                      <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                        <i class="bi bi-cart"></i> Beli
+                      </button>
+                      <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        <i class="bi bi-search me-1"></i>Info
+                      </button>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Donut 4 -->
+              <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1800">
+                <div class="card">
+                  <img src="img/coklat/menu4.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Coklat Hazelnut Bliss</h5>
+                    <p class="card-text">Sensasi lembut coklat dengan aroma hazelnut yang khas.</p>
+                    <p class="card-price">Rp 28.000</p>
+                    <div class="d-flex">
+                      <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                        <i class="bi bi-cart"></i> Beli
+                      </button>
+                      <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo">
+                        <i class="bi bi-search me-1"></i>Info
+                      </button>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <!-- donut vanila -->
+          <div class="row g-4" id="donut-vanilla">
+            <h1 class="text-left fw-bold text-dark p-3" data-aos="fade-right" data-aos-duration="1200">🍦 Donut Vanilla</h1>
+    
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+              <div class="card">
+                <img src="img/vanilla/menu1.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vanilla Classic</h5>
+                  <p class="card-text">Rasa vanilla klasik yang tak pernah membosankan.</p>
+                  <p class="card-price">Rp 22.000</p>
+                  <div class="d-flex">
+                    <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                      <i class="bi bi-cart"></i> Beli
+                    </button>
+                    <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+              <div class="card">
+                <img src="img/vanilla/menu2.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vanilla Sprinkle</h5>
+                  <p class="card-text">Donat ceria dengan taburan warna-warni yang manis.</p>
+                  <p class="card-price">Rp 23.000</p>
+                  <div class="d-flex">
+                    <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                      <i class="bi bi-cart"></i> Beli
+                    </button>
+                    <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+              <div class="card">
+                <img src="img/vanilla/menu3.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Vanilla Cream Dream</h5>
+                  <p class="card-text">Isi krim vanilla lembut untuk momen spesialmu.</p>
+                  <p class="card-price">Rp 24.000</p>
+                  <div class="d-flex">
+                    <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                      <i class="bi bi-cart"></i> Beli
+                    </button>
+                    <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+              <div class="card">
+                <img src="img/vanilla/menu4.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Honey Vanilla Glaze</h5>
+                  <p class="card-text">Manisnya vanilla dengan lapisan madu yang memikat.</p>
+                  <p class="card-price">Rp 26.000</p>
+                  <div class="d-flex">
+                    <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                      <i class="bi bi-cart"></i> Beli
+                    </button>
+                    <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                  </div> 
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+          <!-- Donut Matcha -->
+          <div class="row g-4" id="donut-macha">
+    <h1 class="text-left fw-bold text-dark p-3" data-aos="fade-right" data-aos-duration="1200">🍵 Donut Matcha</h1>
+
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+      <div class="card">
+        <img src="img/matcha/menu1.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Matcha Delight</h5>
+          <p class="card-text">Rasa otentik matcha dari teh hijau Jepang.</p>
+          <p class="card-price">Rp 25.000</p>
+          <div class="d-flex">
+            <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+              <i class="bi bi-cart"></i> Beli
+            </button>
+            <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 " data-aos="fade-up" data-aos-duration="1200">
+      <div class="card">
+        <img src="img/matcha/menu2.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Matcha Choco Fusion</h5>
+          <p class="card-text">Harmoni matcha lembut dan coklat manis dalam satu gigitan.</p>
+          <p class="card-price">Rp 28.000</p>
+          <div class="d-flex">
+            <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+              <i class="bi bi-cart"></i> Beli
+            </button>
+            <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+      <div class="card">
+        <img src="img/matcha/menu3.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Matcha Oreo Crunch</h5>
+          <p class="card-text">Matcha lembut dipadukan dengan renyahnya oreo.</p>
+          <p class="card-price">Rp 27.000</p>
+          <div class="d-flex">
+            <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+              <i class="bi bi-cart"></i> Beli
+            </button>
+            <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+      <div class="card">
+        <img src="img/matcha/menu4.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Matcha Almond Bliss</h5>
+          <p class="card-text">Topping almond kaya rasa di atas donat matcha sempurna.</p>
+          <p class="card-price">Rp 30.000</p>
+          <div class="d-flex">
+            <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+              <i class="bi bi-cart"></i> Beli
+            </button>
+            <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+          </div>
+      </div>
+    </section>
+    <!-- end Menu -->
+
+    <!-- Promo -->
+    <section id="promo" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container mb-4">
+        <h1 class="text-center fw-bold p-3 mt-3 mb-3" data-aos="zoom-in" data-aos-duration="1500">
+          Promo Spesial! 🔥
+        </h1>
+        
+        <div class="row g-4 all-promo">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-right" data-aos-duration="1000">
+            <div class="card">
+              <img src="img/matcha/menu4.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Matcha Almond Bliss</h5>
+                <p class="card-text">Topping almond kaya rasa di atas donat matcha sempurna.</p>
+                <p class="card-price">
+                  <span class="original-price text-decoration-line-through">Rp 27.000</span> 
+                  <span class="discount-price">- Rp 25.000</span>
+                </p>
+                <div class="d-flex">
+                  <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                    <i class="bi bi-cart"></i> Beli
+                  </button>
+                  <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                </div>       
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more promo items with different animations -->
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-left" data-aos-duration="1000">
+            <div class="card">
+              <img src="img/coklat/menu2.png" class="card-img-top border-bottom border-dark border-1" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Donut Coklat Premium</h5>
+                <p class="card-text">Taburan coklat premium dengan kelembutan adonan sempurna.</p>
+                <p class="card-price">
+                  <span class="original-price text-decoration-line-through">Rp 27.000</span> 
+                  <span class="discount-price">- Rp 25.000</span>
+                </p>
+                <div class="d-flex">
+                  <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                    <i class="bi bi-cart"></i> Beli
+                  </button>
+                  <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="zoom-in" data-aos-duration="1200">
+            <div class="card">
+              <img src="img/matcha/menu2.png" class="w-100 card-img-top border-bottom border-dark border-1" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Matcha Choco Fusion</h5>
+                <p class="card-text">Harmoni matcha lembut dan coklat manis dalam satu gigitan.</p>
+                <p class="card-price">
+                  <span class="original-price text-decoration-line-through">Rp 28.000</span> 
+                  <span class="discount-price">- Rp 25.000</span>
+                </p>
+                <div class="d-flex">
+                  <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                    <i class="bi bi-cart"></i> Beli
+                  </button>
+                  <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1500">
+            <div class="card">
+              <img src="img/vanilla/menu1.png" class="w-100 card-img-top border-bottom border-dark border-1" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Vanilla Classic</h5>
+                <p class="card-text">Rasa vanilla klasik yang tak pernah membosankan.</p>
+                <p class="card-price">
+                  <span class="original-price text-decoration-line-through">Rp 22.000</span> 
+                  <span class="discount-price">- Rp 20.000</span>
+                </p>
+                <div class="d-flex">
+                  <button class="btn btn-primary w-50 me-1" data-bs-toggle="modal" data-bs-target="#pesanModal">
+                    <i class="bi bi-cart"></i> Beli
+                  </button>
+                  <button type="button" class="btn btn-secondary w-50" data-bs-toggle="modal" data-bs-target="#modalInfo"><i class="bi bi-search me-1"></i>Info</button>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end Promo -->
+
+
+    <!-- Modal Pesan Donut-->
+    <div class="modal fade" id="pesanModal" tabindex="-1" aria-labelledby="pesanModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="pesanModalLabel"><i class="bi bi-cart-check"></i> Pesan Donat</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-person"></i> Nama Kamu</label>
+                <input type="text" class="form-control" id="pesanNama" placeholder="Masukkan nama kamu">
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-basket"></i> Nama Donat</label>
+                <input type="text" class="form-control" id="pesanDonat" readonly>
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-cash-coin"></i> Harga</label>
+                <input type="text" class="form-control" id="pesanHarga" readonly>
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-plus-square"></i> Jumlah</label>
+                <input type="number" class="form-control" id="pesanJumlah" min="1" value="1">
+              </div>
+              <div class="mb-3">
+                <label class="form-label"><i class="bi bi-chat-left-text"></i> Pesan Untuk Penjual</label>
+                <textarea class="form-control" id="pesanCatatan" rows="3" placeholder="Catatan tambahan (opsional)"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success w-100"><i class="bi bi-check-circle"></i> Konfirmasi Pesanan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Info Donut -->
+    <div class="modal fade" id="modalInfo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary text-white">
+            <h5 class="modal-title" id="detailModalLabel"><i class="bi bi-info-circle"></i> Detail Donat</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-left">
+            <h6>🍩 Komposisi:</h6>
+            <p>Tepung terigu, gula, telur, mentega, ragi, susu, garam, dan bahan tambahan sesuai varian rasa.</p>
+            <h6>💡 Manfaat:</h6>
+            <ul class="list-unstyled">
+              <li>✅ Sumber energi cepat.</li>
+              <li>✅ Mengandung protein untuk regenerasi sel.</li>
+              <li>✅ Lemak sehat untuk tekstur lembut dan rasa gurih.</li>
+            </ul>
+            <h6>⚡ Kandungan Gizi (perkiraan per donat 50g):</h6>
+            <ul class="list-unstyled">
+              <li>🔥 Kalori: 200-300 kcal</li>
+              <li>🍞 Karbohidrat: 30-40g</li>
+              <li>🥚 Protein: 3-5g</li>
+              <li>🥑 Lemak: 10-15g</li>
+              <li>🍬 Gula: 10-20g</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Mengapa Harus Donut Kita? -->
+    <div class="container mt-5">
+      <div class="row flex-lg-row-reverse align-items-center">
+        <!-- Teks -->
+        <div class="col-12 text-center mb-0" data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-2">Kenapa Memilih Donat Kita?</h1>
+          <p class="lead mb-0">Kami menghadirkan donat lezat dengan bahan berkualitas tinggi, dibuat dengan cinta, dan dikemas dengan inovasi untuk memberikan pengalaman terbaik.</p>
+        </div>
+    
+        <!-- List Group -->
+        <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
+          <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+            <div class="list-group shadow-lg">
+              <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" data-aos="zoom-in" data-aos-duration="800">
+                <i class="bi bi-star-fill text-warning" style="font-size: 1.5rem;"></i>
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Rasa Premium</h6>
+                    <p class="mb-0 opacity-75">Dibuat dengan bahan pilihan terbaik.</p>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" data-aos="zoom-in" data-aos-duration="900">
+                <i class="bi bi-heart-fill text-danger" style="font-size: 1.5rem;"></i>
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Dibuat dengan Cinta</h6>
+                    <p class="mb-0 opacity-75">Resep rahasia yang menghasilkan donat lembut.</p>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" data-aos="zoom-in" data-aos-duration="1000">
+                <i class="bi bi-emoji-smile-fill text-success" style="font-size: 1.5rem;"></i>
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Kepuasan Pelanggan</h6>
+                    <p class="mb-0 opacity-75">Ribuan pelanggan puas dengan rasa kami.</p>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" data-aos="zoom-in" data-aos-duration="1100">
+                <i class="bi bi-truck text-primary" style="font-size: 1.5rem;"></i>
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Pengiriman Cepat</h6>
+                    <p class="mb-0 opacity-75">Pesanan dikirim dengan cepat dan aman.</p>
+                  </div>
+                </div>
+              </a>
+    
+              <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true" data-aos="zoom-in" data-aos-duration="1200">
+                <i class="bi bi-coin text-warning" style="font-size: 1.5rem;"></i>
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">Harga Terjangkau</h6>
+                    <p class="mb-0 opacity-75">Nikmati donat premium dengan harga bersahabat.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Gambar -->
+        <div class="col-10 col-sm-8 col-lg-6 d-flex mx-auto" data-aos="fade-left" data-aos-duration="1300">
+          <img src="img/mengapa.png" class="d-block mx-lg-auto img-fluid" alt="Donat Kita" width="500" height="300" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+     <!-- end mengapa Harus Donut Kita -->
+
+        <!--Testimoni -->
+        <section id="Testimoni" data-aos="fade-up" data-aos-duration="1200">
+          <div class="container mb-4">
+            <div class="testmoni text-center">
+              <h1 data-aos="fade-down" data-aos-duration="800">🌟 Testimoni Pelanggan 🌟</h1>
+              <h4 data-aos="fade-down" data-aos-duration="1000">✨ Kepoin Yuk Apa Kata Pelanggan Tentang Donut Kita! 🍩</h4>
+              <div class="all">
+                <div class="row g-4">
+                
+                  <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card shadow-lg border-0">
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <p>🍵 "Donat ini benar-benar yang terbaik! Matcha Almond Delight adalah favorit saya. Sangat lezat!"</p>
+                          <footer class="blockquote-footer">💬 Rizky dari <cite title="Source Title">Jakarta</cite></footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="card shadow-lg border-0">
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <p>🍫 "Coklat Lumer Spesial benar-benar menggugah selera. Coklatnya sangat kaya dan lumer di mulut!"</p>
+                          <footer class="blockquote-footer">💬 Siti dari <cite title="Source Title">Bandung</cite></footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="card shadow-lg border-0">
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <p>🍦 "Donat dengan rasa vanilla yang lembut dan klasik, membuat saya selalu kembali lagi ke Donut Kita."</p>
+                          <footer class="blockquote-footer">💬 Budi dari <cite title="Source Title">Surabaya</cite></footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-md-6" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="card shadow-lg border-0">
+                      <div class="card-body">
+                        <blockquote class="blockquote mb-0">
+                          <p>🍵🍫 "Fusion Matcha Coklat memiliki kombinasi rasa yang sempurna! Sangat memanjakan lidah."</p>
+                          <footer class="blockquote-footer">💬 Andi dari <cite title="Source Title">Yogyakarta</cite></footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
+            </div>           
+          </div>
+        </section> 
+        <!--Testimoni -->
+    
+
+    <!-- Contact Us -->
+    <section class="contact py-5" id="contact" data-aos="fade-up" data-aos-duration="1000">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center" data-aos="fade-down" data-aos-duration="1200">
+            <h2 class="mb-4 display-4 fw-bold" style="color: #8B0000;">Contact Us</h2>
+            <p class="lead mb-5" style="color: #555;">We're here to help! Reach out to us for any inquiries or feedback.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6" data-aos="zoom-in" data-aos-duration="1300">
+            <div class="card shadow-lg p-4 border-0">
+              <form>
+                <div class="mb-4" data-aos="fade-right" data-aos-duration="800">
+                  <label for="name" class="form-label fw-bold" style="color: #8B0000;">Your Name</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                  </div>
+                </div>
+                <div class="mb-4" data-aos="fade-right" data-aos-duration="900">
+                  <label for="email" class="form-label fw-bold" style="color: #8B0000;">Your Email</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                  </div>
+                </div>
+                <div class="mb-4" data-aos="fade-right" data-aos-duration="1000">
+                  <label for="message" class="form-label fw-bold" style="color: #8B0000;">Your Message</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-comment"></i></span>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                  </div>
+                </div>
+                <div class="d-grid" data-aos="fade-up" data-aos-duration="1100">
+                  <button type="submit" class="btn btn-primary btn-lg fw-bold" style="background-color: #8B0000; border: none;">
+                    Send Message <i class="fas fa-paper-plane ms-2"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- End Contact Us -->
+
+    <!-- footer -->
+    <footer id="footer" class="bg-white text-dark container my-5 rounded-3 border shadow-lg" data-aos="fade-up" data-aos-duration="1500">
+      <div class="container-fluid text-left text-md-left">
+        <div class="row">
+          
+          <!-- Column 1 -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3" data-aos="fade-right" data-aos-duration="1000">
+            <img src="img/logo.png" class="w-100" alt="">
+            <p>
+              "Donut Kita, Hadirkan Kelezatan di Setiap Gigitan - Donat Lezat, Bahagia Tiada Henti!"
+            </p>
+          </div>
+    
+          <!-- Column 2 -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" data-aos="fade-up" data-aos-duration="1000">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Products</h5>
+            <p>
+                <a href="#donut-coklate" style="text-decoration: none;">Donut Coklat</a>
+            </p>
+            <p>
+                <a href="#donut-vanilla" style="text-decoration: none;">Donut Vanilla</a>
+            </p>
+            <p>
+                <a href="#donut-macha" style="text-decoration: none;">Donut Matcha</a>
+            </p>
+            <p>
+                <a href="#promo" style="text-decoration: none;">All-Promo</a>
+            </p>
+          </div>
+    
+          <!-- Column 3 -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" data-aos="fade-left" data-aos-duration="1000">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Social Media</h5>
+            <p>
+                <a href="https://web.whatsapp.com/" style="text-decoration: none;">Whats App</a>
+            </p>
+            <p>
+                <a href="https://www.instagram.com/" style="text-decoration: none;">Instagram</a>
+            </p>
+            <p>
+                <a href="https://x.com/" style="text-decoration: none;">Twitter</a>
+            </p>
+            <p>
+                <a href="https://www.facebook.com/" style="text-decoration: none;">Facebook</a>
+            </p>
+          </div>
+    
+          <!-- Column 4 -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3" data-aos="fade-right" data-aos-duration="1000">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+            <p>
+                <a href="https://maps.app.goo.gl/7NjfnrsSfn9WKX6P6" style="text-decoration: none;"><i class="fas fa-home mr-3"></i> Sukowati, Bojonegoro, Indonesia</a>
+            </p>
+            <p>
+                <a href="https://mail.google.com/" style="text-decoration: none;"><i class="fas fa-envelope mr-3"></i> email@example.com</a>
+            </p>
+            <p>
+                <a href="#" style="text-decoration: none;"><i class="fas fa-phone mr-3"></i> + 01 234 567 88</a>
+            </p>
+            <p>
+              <a href="#" style="text-decoration: none;"> <i class="fas fa-print mr-3"></i> + 01 234 567 89</a>
+            </p>
+          </div>
+    
+        </div>
+        <hr>
+    
+        <!-- Footer Bottom -->
+        <div class="container-fluid" data-aos="fade-up" data-aos-duration="1200">
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="text-center text-md-right">
+              <p>Ikuti Kami Di</p>
+                <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                      <a href="https://www.facebook.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://x.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.google.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-google-plus-g"></i></a>
+                  </li>
+                  <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/" class="btn btn-outline-warning btn-floating m-1"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+            
+          <p class="text-center text-md-left">© 2024 Company DonutKita. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- end footer -->
+
+
+    <!-- link bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- link icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- LINK AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+  </body>
+</html>
